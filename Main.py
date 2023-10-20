@@ -23,3 +23,4 @@ while close == 0:
     player.move()
     pygame.display.update()
     clock.tick(60)
+print("Hello")
