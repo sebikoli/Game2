@@ -42,9 +42,9 @@ class Map:
                 tile = Tile(running_picture, x, y)
                 self.tile_list.append(tile)
 
-    def paint(self, display):
+    def paint(self, display, cam):
         for a in self.tile_list:
-            a.paint(display)
+            a.paint(display, cam)
 
 
 class Tile:
@@ -52,5 +52,5 @@ class Tile:
         self.picture = picture
         self.rect = py.Rect(coordinate1, coordinate2, set.NEWXTILE, set.NEWXTILE)
 
-    def paint(self, display):
+    def paint(self, display, cam):
         display.blit(self.picture, self.rect)
