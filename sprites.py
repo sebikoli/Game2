@@ -31,16 +31,16 @@ class Player:
 
     def move(self):
         all_keys = py.key.get_pressed()
-        if all_keys[py.K_w] is True:
+        if all_keys[set.up] is True:
             self.rect.y = self.rect.y-self.speed
             self.running_picture = self.pictures_up[int(self.number)]
-        if all_keys[py.K_s] is True:
+        if all_keys[set.down] is True:
             self.rect.y = self.rect.y+self.speed
             self.running_picture = self.pictures_down[int(self.number)]
-        if all_keys[py.K_a] is True:
+        if all_keys[set.left] is True:
             self.rect.x = self.rect.x-self.speed
             self.running_picture = self.pictures_left[int(self.number)]
-        if all_keys[py.K_d] is True:
+        if all_keys[set.right] is True:
             self.rect.x = self.rect.x+self.speed
             self.running_picture = self.pictures_right[int(self.number)]
         self.number += 0.2
